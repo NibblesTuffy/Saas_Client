@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Typed from 'react-typed'
-const Hero = () => {
+const Hero = (props) => {
+ console.log(`Hero props ${props}` );
+ console.log(props);
   return (
-    <div className="text-white">
+    <div >
       <div className="max-w-[800px] -mt-[96px] w-full h-screen mx-auto text-center justify-center flex flex-col">
         <h1 className="font-bold md:text-6xl sm:text-3xl md:p-4">
           Here story begins...
@@ -20,7 +22,7 @@ const Hero = () => {
           />
         </div>
         <p>Subscribe for your own management platform...</p>
-        <button className="mt-6 mx-auto transition font-bold text-lg w-32 h-8 rounded-md ease-in-out delay-150 bg-cyan-300 hover:-translate-y-1 hover:scale-110  duration-300 ...">
+        <button onClick={props.click} className="mt-6 mx-auto transition font-bold text-lg w-32 h-8 rounded-md ease-in-out delay-150 bg-cyan-300 hover:-translate-y-1 hover:scale-110  duration-300 ...">
           Get Start!
         </button>
       </div>

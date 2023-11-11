@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import './App.css'
 
-
+import Logo from './Logo'
 
 const SuccessDisplay = ({ sessionId }) => {
   return (
-    <section>
+    <section className="bg-white">
       <div className="product Box-root">
         <Logo />
         <div className="description Box-root">
           <h3>Subscription to starter plan successful!</h3>
         </div>
       </div>
-      <form action="/create-portal-session" method="POST">
+      <form
+        action={process.env.REACT_APP_SERVER_ADDRESS + '/create-portal-session'}
+        method="POST"
+      >
         <input
           type="hidden"
           id="session-id"
@@ -27,4 +29,4 @@ const SuccessDisplay = ({ sessionId }) => {
   )
 }
 
-export default SuccessDisplay;
+export default SuccessDisplay

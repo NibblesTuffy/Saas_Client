@@ -17,8 +17,8 @@ const Sidebar = () => {
     <div
       className={
         isSidebarOpen
-          ? 'text-white fixed w-[25%] h-screen left-0 -top-24 border-r border-b border-gray-900 bg-black'
-          : 'text-white fixed w-[25%] h-screen left-0 -top-24  bg-black hidden '
+          ? ' fixed w-[25%] h-screen left-0 -top-24 border-r border-b bg-cyan-100 bg-cyan-100'
+          : ' fixed w-[25%] h-screen left-0 -top-24  bg-cyan-100 hidden '
       }
     >
       <h1 className="fixed left-8 top-8 w-full text-3xl text-cyan-300 font-bold">
@@ -33,7 +33,7 @@ const Sidebar = () => {
         {links.map((item) => {
           const { id, text, url } = item
           return (
-            <NavLink to={url} key={id} className="p-4 border-b border-gray-300">
+            <NavLink to={url} key={id} className="p-4 border-b border-cyan-100">
               {text}
             </NavLink>
           )
@@ -41,14 +41,14 @@ const Sidebar = () => {
         {isAuthenticated ? (
           <NavLink
             onClick={() => logout()}
-            className="p-4 border-b text-white border-gray-300"
+            className="p-4 border-b text-black border-cyan-100"
           >
             Sign Out
           </NavLink>
         ) : (
           <NavLink
             onClick={() => loginWithRedirect()}
-            className="p-4 border-b text-white border-gray-300"
+            className="p-4 border-b text-black border-gcyan-100"
           >
             Sign In
           </NavLink>

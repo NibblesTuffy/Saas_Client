@@ -6,6 +6,7 @@ import Home from './Home'
 import Landing from './Landing'
 import Login from './Login'
 import Resources from './Resources'
+import Dashboard from './dashboard/Dashboard'
 import SharedLayouts from './dashboard/SharedLayouts'
 
 export {
@@ -18,4 +19,5 @@ export {
   Contract,
   Resources,
   Error,
+  Dashboard,
 }
